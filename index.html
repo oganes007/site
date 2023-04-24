@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MebelGa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>MebelGa</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Коллекция" onclick="slowScroll('#main')">Коллекция</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Форма">Заказать проект</a>
+      <a href="#" onclick="slowScroll('#faqq')" title="faqq">Как нас найти?</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Мебельная фабрика</h1>
+    <h3>MebelGa</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h1>Коллекция кухонь</h1>
+      <h3>Четкость форм, продуманная эргономика, высокотехнологичные материалы, трендовые текстуры и цвета. Для тех, кто ценит лаконичность и функциональность.<h3>
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="1.jpg" style="width:80%">
+  <div class="text">Minimalizm</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="2.jpg" style="width:70%">
+  <div class="text">Free</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="3.jpg" style="width:70%">
+  <div class="text">Night</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="4.jpg" style="width:70%">
+  <div class="text">Miami</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5/ 5</div>
+  <img src="5.jpg" style="width:70%">
+  <div class="text">High</div>
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Преимущества</h2>
+    <ul>
+        <li>Выезд дизайнера на замер</li>
+        <li>Бесплатные консультации по телефону</li>
+        <li>Собственное производство</li>
+        <li>Качественные и разнообразные материалы</li>
+        <li>Расчёт стоимости по картинке и размерам</li>
+        <li>Гарантия на мебель 36 месяцев</li>
+        <li>Бесплатная доставка и сборка</li>
+        <li>Бесплатный вызов замерщика</li>
+        <li>Минимальные сроки производства</li>
+        <li>Лучшее сочетание цены и качества</li>
+  </ul>
+  </div>
+
+  <div id="contacts">
+    
+    <center><h5>Давайте посчитаем вместе!</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+      <input type="email" placeholder="Введите email" name="email" id="email"><br>
+      <label for="number">Ваш телефон <span>*</span></label><br>
+      <input type="text" placeholder="Введите номер телефона" name="number" id="number"><br>
+      <label for="message">Сообщение <span>*</span></label><br>
+      <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+      <div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+  <div id="overview2">
+    <p>Современная кухня готова поспорить с гостиной за звание сердца дома. Сегодня это не просто помещение для приготовления пищи, а многофункциональное пространство, где можно посмотреть телевизор и поработать за ноутбуком, повеселиться с друзьями или устроить романтический вечер. Интерьер кухни становится все более изысканным и респектабельным и, конечно, требует использования соответствующей мебели</p>
+    <p>Кухни в различных стилях, созданные по заказу группы MebelGa итальянской студией Zengiaro Design, отвечают самым высоким требованиям качества и функциональности. Широкий размерный ряд позволяет создавать на их основе композиции с островом, угловые кухни и интерьеры квартир-студий. Коллекции включают и стеновые панели, которые помогут воплотить любые дизайнерские идеи. Например, «зарифмовать» фартук для кухни с элементами гостиной зоны.</p>
+    <p>В рамках каждой коллекции MebelGa можно выбрать цвет кухни или комбинацию цветов и текстур. Для создания элегантного интерьера прекрасно подойдет белая кухня в сочетании с текстурой дерева. А любителям креативных решений наверняка понравятся открытые модули сочных, насыщенных оттенков.</p>
+    <p>Идеи дизайна кухни подскажут фото, представленные на сайте. Кроме того, на страничках коллекций вы найдете готовые решения для помещений различного метража, варианты фасадов, ручек и внутреннего наполнения. Ну, а если вы уже готовы купить кухню, приглашаем в наши. Опытные консультанты бесплатно разработают проект вашего будущего интерьера в программе 3D, сориентируют по ценам на кухни и оформят заказ.</p>
+    <p>Кухни на заказ по индивидуальным размерам от производителя в Ростове-на-Дону. В каталоге MebelGa представлен большой выбор готовых решений на любой вкус. При желании вы можете сами выбрать цвет, форму и материалы для изготовления кухни. Закажите кухонный гарнитур европейского качества с гарантией на 3 года.</p>
+  </div>
+  <div id="faqq">
+    <div>
+      <span class="title">Как нас найти?</span><br><br>
+      <p>Магазин мебели,Пойменная ул., 1Ж, микрорайон Заречная, Ростов-на-Дону</p>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9d19a14a82e9e98c713454931aa7fca021656a99e625b341d7f1859551c856d6&amp;width=350&amp;height=315  &amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    <div>
+    <span class="title">Творческий цех</span><br><br>
+    <p>Вашему вниманию представляется видео-экскурсия по креативному пространству</p>
+    <iframe width="350" height="315" src="https://www.youtube.com/embed/C9Rbqu_ohD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div>
+      <span class="title">Контакты</span><br><br>
+      <p>Центральный офис: г.Ростов-на-Дону, пл.Гагарина, д.1</p>
+      <h1>Тел.8 800 707 07 07</h1><Br>
+      <h2>Работаем с 8:00 до 21:00 (мск)</h2><br>
+      <a href="#" onclick="slowScroll('#contacts')" title="Форма">Заказать звонок</a>
+      <p>.</p>
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
